@@ -1,4 +1,7 @@
 
-<button class="btn btn-primary" [disabled] = "allowServer" > AddServer </button> <br>
+<button class="btn btn-primary" [disabled] = "!allowServer" (click)="onServerCreated()" > AddServer </button> <br>
+<!-- <p [innerText]="allowServer" ></p> -->
+
+<p> {{ onServerCreate }} </p>
 
 <app-server> </app-server>
