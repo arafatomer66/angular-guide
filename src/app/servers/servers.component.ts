@@ -10,8 +10,8 @@ export class ServersComponent implements OnInit {
   onServerCreate : string = "No server created !" ;
   serverName = '' ;
 
-  onServerCreated(){
-    this.onServerCreate = "Server Created !" ;
+  onServerCreated(){ 
+    this.onServerCreate = "Server Created , And Server Name is :" + this.serverName ;
   }
   constructor() { }
 
