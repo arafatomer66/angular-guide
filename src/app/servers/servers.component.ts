@@ -6,10 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./servers.component.css']
 })
 export class ServersComponent implements OnInit {
-
+  allowServer : boolean = false ;
   constructor() { }
 
   ngOnInit() {
+    setTimeout(() => {
+      this.allowServer = true ;
+    }, 2000);
   }
 
 }
