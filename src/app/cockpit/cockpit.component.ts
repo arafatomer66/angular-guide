@@ -1,4 +1,4 @@
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component, Output, EventEmitter, ViewChild, ElementRef } from '@angular/core';
 
 
 @Component({
@@ -10,25 +10,27 @@ export class CockpitComponent  {
   @Output() serverCreated = new EventEmitter <{ serverName :string , serverContent : string }> () ;
   @Output('bpCreated') blueprintCreated = new EventEmitter <{ serverName :string , serverContent : string }> () ;
   // newServerName = '';  dont need this any more for local reference 
-  newServerContent = '';
+  // newServerContent = '';
+
+  @ViewChild('serverContentInput') serverContentInput :ElementRef ;
 
   constructor() { }
 
 
 
-  onAddServer(nameInput) {
+  onAddServer(nameInput : HTMLInputElement) {
  
     this.serverCreated.emit({
       serverName : nameInput.value ,
-      serverContent : this.newServerContent
+      serverContent : this.serverContentInput.nativeElement.value
     });
  
   }
 
-  onAddBlueprint(nameInput) {
+  onAddBlueprint(nameInput : HTMLInputElement) {
     this.blueprintCreated.emit({
       serverName : nameInput.value ,
-      serverContent : this.newServerContent
+      serverContent : this.serverContentInput.nativeElement.value
     });
   
 
