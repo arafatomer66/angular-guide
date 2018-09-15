@@ -1,4 +1,4 @@
-import { Component, Output, EventEmitter, ViewChild, ElementRef } from '@angular/core';
+import { Component, Output, EventEmitter, ViewChild, ElementRef, OnInit } from '@angular/core';
 
 
 @Component({
@@ -6,7 +6,7 @@ import { Component, Output, EventEmitter, ViewChild, ElementRef } from '@angular
   templateUrl: './cockpit.component.html',
   styleUrls: ['./cockpit.component.css']
 })
-export class CockpitComponent  {
+export class CockpitComponent   {
   @Output() serverCreated = new EventEmitter <{ serverName :string , serverContent : string }> () ;
   @Output('bpCreated') blueprintCreated = new EventEmitter <{ serverName :string , serverContent : string }> () ;
   // newServerName = '';  dont need this any more for local reference 
@@ -18,21 +18,32 @@ export class CockpitComponent  {
 
 
 
-  onAddServer(nameInput : HTMLInputElement) {
+  onAddServer(serverNameInput : HTMLInputElement) {
  
     this.serverCreated.emit({
-      serverName : nameInput.value ,
+      serverName : serverNameInput.value ,
       serverContent : this.serverContentInput.nativeElement.value
     });
  
   }
 
-  onAddBlueprint(nameInput : HTMLInputElement) {
+  onAddBlueprint(serverNameInput : HTMLInputElement) {
     this.blueprintCreated.emit({
-      serverName : nameInput.value ,
+      serverName : serverNameInput.value ,
       serverContent : this.serverContentInput.nativeElement.value
     });
   
 
 }
+
+//life cycle hooks
+  ngOnInit() {}
+  ngOnChange() {}
+  ngDoCheck(){}
+  ngAfterContentInit(){}
+  ngAfterContentChecked(){}
+  ngAfterViewInit(){}
+  ngAfterViewChecked(){}
+  ngOnDestroy(){}
+
 }
