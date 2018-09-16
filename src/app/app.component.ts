@@ -7,10 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  serverElements = [
-    {  type : 'server' , name : 'testServer' ,content :'just a test' }
-
-];
+  serverElements = [ ];
 
 onServerAdded( serverData : {  serverName :string , serverContent : string   }) {
     this.serverElements.push({
@@ -27,7 +24,11 @@ onServerAdded( serverData : {  serverName :string , serverContent : string   }) 
       content: blueprintData.serverContent
     });
   }
-  
 
+onBindCreated(bindData : { bindName :string }){
+  this.serverElements.push({
+    name : bindData.bindName 
+  })
+}
   
 }
