@@ -8,15 +8,15 @@ import { Component, OnInit, EventEmitter ,Output } from '@angular/core';
 export class BindComponent implements OnInit {
    
   @Output() eventCreated = new EventEmitter < { bindName :string } >();
-  newBindContent = '' ;
+  // newBindContent = '' ;
   constructor() { }
 
   ngOnInit() {
   }
 
-  onAddServer(){
+  onAddServer(bindInput){
     this.eventCreated.emit({
-      bindName : this.newBindContent 
+      bindName : bindInput.value
     });
   }
 

@@ -1,7 +1,7 @@
 
 
-<input type="text" class="form-control" [(ngModel)]="newBindContent">
+<input type="text" class="form-control" #bindNameInput  >
 <button class="btn btn-primary" 
-(click)="onAddServer($event)">
+(click)="onAddServer(bindNameInput)">
        click
 </button>
