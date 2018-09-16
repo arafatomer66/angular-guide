@@ -1,4 +1,4 @@
-import { Component, OnInit, EventEmitter ,Output } from '@angular/core';
+import { Component, OnInit, EventEmitter ,Output, ViewChild , ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-bind',
@@ -9,14 +9,15 @@ export class BindComponent implements OnInit {
    
   @Output() eventCreated = new EventEmitter < { bindName :string } >();
   // newBindContent = '' ;
+  @ViewChild('bindNameInput') bindNameInput : ElementRef;
   constructor() { }
 
   ngOnInit() {
   }
 
-  onAddServer(bindInput){
+  onAddServer(){
     this.eventCreated.emit({
-      bindName : bindInput.value
+      bindName : this.bindNameInput.nativeElement.value
     });
   }
 
