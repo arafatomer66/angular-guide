@@ -7,28 +7,34 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  serverElements = [ ];
+//   serverElements = [ ];
 
-onServerAdded( serverData : {  serverName :string , serverContent : string   }) {
-    this.serverElements.push({
-      type: 'server',
-      name: serverData.serverName,
-      content: serverData.serverContent
-    });
-  }
+// onServerAdded( serverData : {  serverName :string , serverContent : string   }) {
+//     this.serverElements.push({
+//       type: 'server',
+//       name: serverData.serverName,
+//       content: serverData.serverContent
+//     });
+//   }
 
-  onBlueprintAdded(blueprintData : {  serverName :string , serverContent : string   } ) {
-    this.serverElements.push({
-      type: 'blueprint',
-      name: blueprintData.serverName,
-      content: blueprintData.serverContent
-    });
-  }
+//   onBlueprintAdded(blueprintData : {  serverName :string , serverContent : string   } ) {
+//     this.serverElements.push({
+//       type: 'blueprint',
+//       name: blueprintData.serverName,
+//       content: blueprintData.serverContent
+//     });
+//   }
 
-onBindCreated(bindData : { bindName :string }){
-  this.serverElements.push({
-    name : bindData.bindName 
-  })
+// onBindCreated(bindData : { bindName :string }){
+//   this.serverElements.push({
+//     name : bindData.bindName 
+//   })
+// }
+   loadedFeature = '' ;
+
+   onNavigate(feature :string){
+    this.loadedFeature = feature ;
 }
-  
+
+
 }
