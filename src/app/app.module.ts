@@ -15,6 +15,7 @@ import { CockpitComponent } from './cockpit/cockpit.component';
 import { ServerElementComponent } from './server-element/server-element.component';
 import { BindComponent } from './bind/bind.component';
 import { BindElementComponent } from './bind-element/bind-element.component';
+import { DirectiveComponent } from './directive/directive.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { BindElementComponent } from './bind-element/bind-element.component';
     CockpitComponent,
     ServerElementComponent,
     BindComponent,
-    BindElementComponent
+    BindElementComponent,
+    DirectiveComponent
   ],
   imports: [
     BrowserModule,
