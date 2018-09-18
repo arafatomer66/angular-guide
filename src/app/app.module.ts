@@ -16,6 +16,7 @@ import { ServerElementComponent } from './server-element/server-element.componen
 import { BindComponent } from './bind/bind.component';
 import { BindElementComponent } from './bind-element/bind-element.component';
 import { DirectiveComponent } from './directive/directive.component';
+import { UnlessDirective } from './unless.directive';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { DirectiveComponent } from './directive/directive.component';
     ServerElementComponent,
     BindComponent,
     BindElementComponent,
-    DirectiveComponent
+    DirectiveComponent,
+    UnlessDirective
   ],
   imports: [
     BrowserModule,
