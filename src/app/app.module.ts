@@ -18,6 +18,7 @@ import { BindElementComponent } from './bind-element/bind-element.component';
 import { DirectiveComponent } from './directive/directive.component';
 import { UnlessDirective } from './unless.directive';
 import { BasicHighlightDirective } from './basic-highlight/basic-highlight.directive';
+import { BetterHighlightDirective } from './better-highligh/better-highlight.directive';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { BasicHighlightDirective } from './basic-highlight/basic-highlight.direc
     BindElementComponent,
     DirectiveComponent,
     UnlessDirective,
-    BasicHighlightDirective
+    BasicHighlightDirective,
+    BetterHighlightDirective
   ],
   imports: [
     BrowserModule,
