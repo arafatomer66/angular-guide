@@ -28,7 +28,18 @@
       </ul>
       <!-- Also can be use defaultColor = 'yellow' -->
       <!-- [appBetterHighlight]="'green'" can be used -->
-      <p appBetterHighlight="'green'" [defaultColor] = "'yellow'" [highlightColor] ="'green'"  > Hi there , My Name is Arafat ! </p>
+      <p 
+      appBetterHighlight="'green'" 
+      [defaultColor] = "'yellow'" 
+      [highlightColor] ="'green'"  > Hi there , My Name is Arafat ! </p>
+       
+      <div [ngSwitch]="value" >
+      <p  *ngSwitchCase = "1" >Now you value with ngSwitch is : 1</p>
+      <p  *ngSwitchCase = "2">Now you value with ngSwitch is : 2</p>
+      <p  *ngSwitchCase = "3">Now you value with ngSwitch is : 3</p>
+      <p  *ngSwitchDefault>Now you value with ngSwitch is : 4</p>
+      </div>
+      
     </div>
   </div>
 </div>

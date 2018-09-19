@@ -11,6 +11,7 @@ export class DirectiveComponent implements OnInit {
   oddNumbers =  [1,3,5] ;
   evenNumbers =  [2,4]   ;
   onlyOdd = false;
+  value : number =  1 ;
 
   constructor() { }
 
