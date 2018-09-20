@@ -20,6 +20,9 @@ import { UnlessDirective } from './unless.directive';
 import { BasicHighlightDirective } from './basic-highlight/basic-highlight.directive';
 import { BetterHighlightDirective } from './better-highligh/better-highlight.directive';
 import { DropdownDirective } from './shared/dropdown.directive';
+import { ServicesComponent } from './services/services.component';
+import { AccountComponent } from './services/account/account.component';
+import { NewAccountComponent } from './services/new-account/new-account.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +42,10 @@ import { DropdownDirective } from './shared/dropdown.directive';
     UnlessDirective,
     BasicHighlightDirective,
     BetterHighlightDirective,
-    DropdownDirective
+    DropdownDirective,
+    ServicesComponent,
+    AccountComponent,
+    NewAccountComponent
   ],
   imports: [
     BrowserModule,
