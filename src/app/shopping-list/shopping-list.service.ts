@@ -5,26 +5,30 @@ import { Ingredient } from '../shared/ingredient.model';
   providedIn: 'root'
 })
 export class ShoppingListService {
-  ingredientChanged = new EventEmitter<Ingredient[]>();
-
-  constructor() { }
-
+  ingredientsChanged = new EventEmitter<Ingredient[]>();
   private ingredients: Ingredient[] = [
     new Ingredient('Apples', 5),
     new Ingredient('Tomatoes', 10),
   ];
 
-  getIngredient(){
-    return  this.ingredients.slice();
+  getIngredient() {
+    return this.ingredients.slice();
   }
 
-  addIngredient(ingredient : Ingredient){
+  addIngredient(ingredient: Ingredient) {
     this.ingredients.push(ingredient);
-    this.ingredientChanged.emit(this.ingredients.slice());
+    this.ingredientsChanged.emit(this.ingredients.slice());
   }
 
-
+  addIngredients(ingredients: Ingredient[]) {
+    // for (let ingredient of ingredients) {
+    //   this.addIngredient(ingredient);
+    // }
+    this.ingredients.push(...ingredients);
+    this.ingredientsChanged.emit(this.ingredients.slice());
+  }
 }
+
 
 
 // always make service properties in private method 
