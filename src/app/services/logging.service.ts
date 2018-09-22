@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class LoggingService {
 
-  constructor() { }
+  constructor( ) { }
 
   logStatusChange(status : string){
      console.log('You have changes the server status , new status :' + status);

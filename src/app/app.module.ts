@@ -24,6 +24,7 @@ import { ServicesComponent } from './services/services.component';
 import { AccountComponent } from './services/account/account.component';
 import { NewAccountComponent } from './services/new-account/new-account.component';
 import { AccountsService } from './services/accounts.service';
+import { LoggingService } from './services/logging.service';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,7 @@ import { AccountsService } from './services/accounts.service';
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [AccountsService , LoggingService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
