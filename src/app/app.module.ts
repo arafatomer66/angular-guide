@@ -27,6 +27,15 @@ import { AccountsService } from './services/accounts.service';
 import { LoggingService } from './services/logging.service';
 import { RecipeService } from './recipes/recipe.service';
 import { ShoppingListService } from './shopping-list/shopping-list.service';
+import { RoutingComponent } from './routing/routing.component';
+import { HomeComponent } from './routing/home/home.component';
+
+import { ServersComponent } from './routing/servers/servers.component';
+import { EditServerComponent } from './routing/servers/edit-server/edit-server.component';
+import { UsersComponent } from './routing/users/users.component';
+import { UserComponent } from './routing/users/user/user.component';
+import { ServersService } from './routing/servers/servers.service';
+import { ServerComponent } from './routing/servers/server/server.component';
 
 @NgModule({
   declarations: [
@@ -49,14 +58,21 @@ import { ShoppingListService } from './shopping-list/shopping-list.service';
     DropdownDirective,
     ServicesComponent,
     AccountComponent,
-    NewAccountComponent
+    NewAccountComponent,
+    RoutingComponent,
+    HomeComponent,
+    ServersComponent,
+    EditServerComponent,
+    UsersComponent,
+    UserComponent,
+    ServerComponent,EditServerComponent,UserComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [AccountsService , LoggingService ,RecipeService , ShoppingListService ],
+  providers: [AccountsService , LoggingService ,RecipeService , ShoppingListService ,ServersService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
