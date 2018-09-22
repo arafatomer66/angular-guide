@@ -12,13 +12,9 @@ export class ServicesComponent implements OnInit  {
   accounts : { name :string , status : string }[] = [] ;
   
 constructor(private accountsService : AccountsService){
-
 }
 
-ngOnInit(){
- this.accounts =  this.accountsService.accounts ;
-}
-
-
-
+    ngOnInit(){
+    this.accounts =  this.accountsService.accounts ;
+    }
 }
