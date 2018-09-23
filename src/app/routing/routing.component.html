@@ -4,7 +4,8 @@
       <ul class="nav nav-tabs">
         <li role="presentation" class="active" routerLinkActive = "active" [routerLinkActiveOptions] = "{ exact :true }" >
           <a routerLink ="/"
-          
+          [queryParams] = "{allowEdit : '1'}"
+          fragment = "loading"
            >Home</a>
         </li>
         <li role="presentation" routerLinkActive = "active">
@@ -13,9 +14,8 @@
           >Servers</a
             ></li>
         <li role="presentation" routerLinkActive = "active">
-          <a [routerLink] = "[ '/users' ]" 
- 
-           >Users</a>
+          <a [routerLink] = "[ '/users' ]"
+          >Users</a>
         </li>
       </ul>
     </div>

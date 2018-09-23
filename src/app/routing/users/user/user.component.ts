@@ -31,9 +31,6 @@ export class UserComponent implements OnInit {
   OnDestroy(){
       this.paramsSubscription.unsubscribe();
   }
-
-
-
 }
 
 
