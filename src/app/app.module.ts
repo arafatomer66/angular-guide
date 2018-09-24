@@ -29,6 +29,7 @@ import { ShoppingListService } from './shopping-list/shopping-list.service';
 
 import { Routes ,RouterModule  } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
+import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.component';
 
 
 
@@ -54,6 +55,7 @@ import { AppRoutingModule } from './app-routing.module';
     ServicesComponent,
     AccountComponent,
     NewAccountComponent,
+    RecipeStartComponent,
    
   ],
   imports: [
