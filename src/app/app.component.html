@@ -1,21 +1,23 @@
 
-<!-- <app-header (featureSelected)="onNavigate($event)" ></app-header>
+<app-header (featureSelected)="onNavigate($event)" ></app-header>
 <div class="container">
   <div class="row">
-    <div class="col-md-12"> -->
+    <div class="col-md-12"> 
       <!-- <app-recipes *ngIf ="loadedFeature === 'recipe'" ></app-recipes>
       <app-shopping-list *ngIf ="loadedFeature === 'shopping-list'" ></app-shopping-list>
      <app-bind *ngIf= "loadedFeature ==='test'"></app-bind> 
      <app-directive *ngIf= "loadedFeature ==='directive'" ></app-directive>
-     <app-services *ngIf= "loadedFeature ==='service'" ></app-services> -->
-     <!-- <app-routing *ngIf= "loadedFeature ==='routing'" ></app-routing> -->
- 
-    <!-- </div>
+     <app-services *ngIf= "loadedFeature ==='service'" ></app-services>  -->
+
+
+     <router-outlet></router-outlet>
+
+   </div>
   </div>
-</div> -->
+</div> 
 
-
-<!-- <div class="container">
+<!-- 
+ <div class="container">
   <app-cockpit (serverCreated)="onServerAdded($event)" (bpCreated)="onBlueprintAdded($event)">
   </app-cockpit>
   <hr>
@@ -25,10 +27,10 @@
        <app-server-element *ngFor="let serverElement of serverElements" [srvElement]="serverElement" ></app-server-element>
     </div>
   </div>
-</div>
- -->
+</div> -->
 
-<!-- <div class="container" >
+<!-- 
+ <div class="container" >
   <app-bind (eventCreated)="onBindCreated($event)" ></app-bind>
    <div class="row" >
       <app-bind-element 
@@ -36,13 +38,13 @@
       [srvElement]="serverElement"
       ></app-bind-element>
    </div>
-</div> -->
+</div>  -->
 
 
-<!-- -----------Attribute Directive vs Structural Directives---------
+ <!-- -----------Attribute Directive vs Structural Directives---------
 
 Attribute : only affect/change the elemnt they added .
 Structural : Affects a whole area of DOM
-  -->
+ 
 
-  <app-routing></app-routing>
+  <app-routing></app-routing> -->
