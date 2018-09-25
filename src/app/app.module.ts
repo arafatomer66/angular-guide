@@ -31,6 +31,9 @@ import { Routes ,RouterModule  } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.component';
 import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
+import { ObservableComponent } from './observable/observable.component';
+import { HomeComponent } from './observable/home/home.component';
+import { UserComponent } from './observable/user/user.component';
 
 
 
@@ -58,6 +61,9 @@ import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component
     NewAccountComponent,
     RecipeStartComponent,
     RecipeEditComponent,
+    ObservableComponent,
+    HomeComponent,
+    UserComponent,
    
   ],
   imports: [

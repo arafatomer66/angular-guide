@@ -7,6 +7,9 @@ import { DirectiveComponent } from './directive/directive.component';
 import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.component';
 import { RecipeDetailComponent } from './recipes/recipe-detail/recipe-detail.component';
 import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
+import { ObservableComponent } from './observable/observable.component';
+import { HomeComponent } from './observable/home/home.component';
+import { UserComponent } from './observable/user/user.component';
  
 
 const appRoutes : Routes = [
@@ -17,9 +20,13 @@ const appRoutes : Routes = [
        { path : ':id' , component : RecipeDetailComponent },
        { path : ':id/edit' ,component : RecipeEditComponent  }
     ]} ,
-    { path : 'shopping-list' , component : ShoppingListComponent},
-    { path : 'services' , component : ServicesComponent} ,
-    { path : 'directive' , component : DirectiveComponent} 
+        { path : 'shopping-list' , component : ShoppingListComponent},
+        { path : 'services' , component : ServicesComponent} ,
+        { path : 'directive' , component : DirectiveComponent},
+        { path : 'observable' , component : ObservableComponent , children : [
+            { path : 'observables' , component:HomeComponent } ,
+            { path : 'user/:id' , component : UserComponent  }
+        ]  }
 ]
 @NgModule({
     imports : [RouterModule.forRoot(appRoutes) ],

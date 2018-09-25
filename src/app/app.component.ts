@@ -30,11 +30,8 @@ export class AppComponent {
 //     name : bindData.bindName 
 //   })
 // }
-   loadedFeature = 'recipe' ;
+ 
 
-   onNavigate(feature :string){
-    this.loadedFeature = feature ;
-}
 
 
 }
