@@ -34,6 +34,7 @@ import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component
 import { ObservableComponent } from './observable/observable.component';
 import { HomeComponent } from './observable/home/home.component';
 import { UserComponent } from './observable/user/user.component';
+import { UserService } from './observable/user.service';
 
 
 
@@ -73,7 +74,7 @@ import { UserComponent } from './observable/user/user.component';
     AppRoutingModule
 
   ],
-  providers: [AccountsService , LoggingService ,RecipeService , ShoppingListService  ],
+  providers: [AccountsService , LoggingService ,RecipeService , ShoppingListService , UserService  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
