@@ -25,8 +25,10 @@ export class FormsComponent implements OnInit {
 
 
   onSubmit(){
-     console.log(this.signupform
-      ) ;
+   if(this.signupform.valid == false){
+     alert("Not valid");
+   }
+   console.log('valid');
   }
 
 }
