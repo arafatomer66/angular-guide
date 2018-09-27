@@ -9,6 +9,7 @@ import { NgForm } from '@angular/forms';
 export class FormsComponent implements OnInit {
 
   @ViewChild('f') signupform : NgForm ;
+  answer :any = '' ;
 
   defaultQuestion = 'pet' ;
 
