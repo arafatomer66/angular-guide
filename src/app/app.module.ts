@@ -35,6 +35,9 @@ import { ObservableComponent } from './observable/observable.component';
 import { HomeComponent } from './observable/home/home.component';
 import { UserComponent } from './observable/user/user.component';
 import { UserService } from './observable/user.service';
+import { FormsComponent } from './forms/forms.component';
+
+
 
 
 
@@ -45,6 +48,7 @@ import { UserService } from './observable/user.service';
     RecipesComponent,
     RecipeListComponent,
     RecipeDetailComponent,
+    FormsModule,
     RecipeItemComponent,
     ShoppingListComponent,
     ShoppingEditComponent,
@@ -65,6 +69,7 @@ import { UserService } from './observable/user.service';
     ObservableComponent,
     HomeComponent,
     UserComponent,
+    FormsComponent,
    
   ],
   imports: [

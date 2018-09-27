@@ -10,6 +10,7 @@ import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component
 import { ObservableComponent } from './observable/observable.component';
 import { HomeComponent } from './observable/home/home.component';
 import { UserComponent } from './observable/user/user.component';
+import { FormsComponent } from './forms/forms.component';
  
 
 const appRoutes : Routes = [
@@ -23,6 +24,7 @@ const appRoutes : Routes = [
         { path : 'shopping-list' , component : ShoppingListComponent},
         { path : 'services' , component : ServicesComponent} ,
         { path : 'directive' , component : DirectiveComponent},
+        { path : 'forms' , component : FormsComponent},
         { path : 'observable' , component : ObservableComponent , children : [
             { path : 'observables' , component:HomeComponent } ,
             { path : 'user/:id' , component : UserComponent  }
