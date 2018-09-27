@@ -10,6 +10,8 @@ export class FormsComponent implements OnInit {
 
   @ViewChild('f') signupform : NgForm ;
 
+  defaultQuestion = 'pet' ;
+
   constructor() { }
 
   ngOnInit() {
