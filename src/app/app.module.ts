@@ -48,7 +48,6 @@ import { FormsComponent } from './forms/forms.component';
     RecipesComponent,
     RecipeListComponent,
     RecipeDetailComponent,
-    FormsModule,
     RecipeItemComponent,
     ShoppingListComponent,
     ShoppingEditComponent,
