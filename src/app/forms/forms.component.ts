@@ -12,8 +12,15 @@ export class FormsComponent implements OnInit {
   answer :any = '' ;
 
   defaultQuestion = 'pet' ;
-
   genders = ['Male' ,'Female'] ;
+
+  user = {
+     username : '',
+     email : '' ,
+     question : '',
+     qAnswer : '',
+     gender : ''
+  };
 
   constructor() { }
 
@@ -42,24 +49,37 @@ export class FormsComponent implements OnInit {
                     
                   username : suggestedName ,
        
-        
                   }, 
           }
     );
       
   }
 
+  submitted = false ;
+
   // onSubmit(forms : NgForm){
   //   console.log(forms.value.email);
   // }
 
 
+  // onSubmit(){
+  //  if(this.signupform.valid == false){
+  //    alert("Not valid");
+  //  }
+  //  console.log('valid');
+  //  console.log(this.signupform);
+  // }
+
   onSubmit(){
-   if(this.signupform.valid == false){
-     alert("Not valid");
-   }
-   console.log('valid');
-   console.log(this.signupform);
+    console.log(this.signupform);
+    this.submitted = true ;
+    this.user.username = this.signupform.value.userData.username;
+    this.user.email = this.signupform.value.userData.email;
+    this.user.question = this.signupform.value.secret;
+    this.user.qAnswer = this.signupform.value.questionAnswer;
+    this.user.gender = this.signupform.value.gender;
+
+    this.signupform.reset();
   }
 
 }
