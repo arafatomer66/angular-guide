@@ -22,6 +22,31 @@ export class FormsComponent implements OnInit {
 
   suggestUserName() {
     const suggestedName = 'Superuser';
+    // this.signupform.setValue(
+    //   {
+    //       userData : {
+    //       username : suggestedName ,
+    //       email : 'arafatomer66@gmail.com'
+
+    //   },
+    //   secret : '' ,
+    //   questionAnswer : '',
+    //   gender : 'Male'
+    //   }
+    // )
+
+    this.signupform.form.patchValue(
+          {
+                  userData : 
+                  {
+                    
+                  username : suggestedName ,
+       
+        
+                  }, 
+          }
+    );
+      
   }
 
   // onSubmit(forms : NgForm){
