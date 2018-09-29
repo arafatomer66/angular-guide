@@ -32,6 +32,7 @@ export class FormsComponent implements OnInit {
      alert("Not valid");
    }
    console.log('valid');
+   console.log(this.signupform);
   }
 
 }
