@@ -36,6 +36,7 @@ import { HomeComponent } from './observable/home/home.component';
 import { UserComponent } from './observable/user/user.component';
 import { UserService } from './observable/user.service';
 import { FormsComponent } from './forms/forms.component';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 
 
 
@@ -69,6 +70,7 @@ import { FormsComponent } from './forms/forms.component';
     HomeComponent,
     UserComponent,
     FormsComponent,
+    ReactiveFormComponent,
    
   ],
   imports: [
