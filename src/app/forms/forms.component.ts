@@ -13,6 +13,8 @@ export class FormsComponent implements OnInit {
 
   defaultQuestion = 'pet' ;
 
+  genders = ['Male' ,'Female'] ;
+
   constructor() { }
 
   ngOnInit() {
