@@ -37,6 +37,7 @@ import { UserComponent } from './observable/user/user.component';
 import { UserService } from './observable/user.service';
 import { FormsComponent } from './forms/forms.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+import {  ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -70,7 +71,7 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
     HomeComponent,
     UserComponent,
     FormsComponent,
-    ReactiveFormComponent,
+    ReactiveFormComponent
    
   ],
   imports: [
