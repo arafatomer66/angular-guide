@@ -3,6 +3,7 @@ import { Ingredient } from '../../shared/ingredient.model';
 import { ShoppingListService } from '../shopping-list.service';
 import { NgForm } from '@angular/forms';
 import { Subscription } from 'rxjs';
+import { THROW_IF_NOT_FOUND } from '@angular/core/src/di/injector';
 
 
 @Component({
@@ -40,7 +41,13 @@ export class ShoppingEditComponent implements OnInit , OnDestroy {
   onSubmit(form : NgForm){
 
     const newIngredient = new Ingredient(form.value.name , form.value.amount);
-    this.slService.addIngredient( newIngredient );
+    if(this.editMode){
+      this.slService.updateIngredient(this.editItemIndex , newIngredient)
+    }else
+    {
+      this.slService.addIngredient( newIngredient );
+    }
+    
   }
 
   ngOnDestroy(){
