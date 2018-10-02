@@ -38,6 +38,7 @@ import { UserService } from './observable/user.service';
 import { FormsComponent } from './forms/forms.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { PipeComponent } from './pipe/pipe.component';
+import { ShortenPipe } from './pipe/shorten.pipe';
 
 
 
@@ -74,7 +75,8 @@ import { PipeComponent } from './pipe/pipe.component';
     UserComponent,
     FormsComponent,
     ReactiveFormComponent,
-    PipeComponent
+    PipeComponent,
+    ShortenPipe
    
   ],
   imports: [
