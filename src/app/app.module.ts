@@ -39,6 +39,7 @@ import { FormsComponent } from './forms/forms.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { PipeComponent } from './pipe/pipe.component';
 import { ShortenPipe } from './pipe/shorten.pipe';
+import { FilterPipe } from './pipe/filter.pipe';
 
 
 
@@ -76,7 +77,8 @@ import { ShortenPipe } from './pipe/shorten.pipe';
     FormsComponent,
     ReactiveFormComponent,
     PipeComponent,
-    ShortenPipe
+    ShortenPipe,
+    FilterPipe
    
   ],
   imports: [
