@@ -12,6 +12,7 @@ import { HomeComponent } from './observable/home/home.component';
 import { UserComponent } from './observable/user/user.component';
 import { FormsComponent } from './forms/forms.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+import { PipeComponent } from './pipe/pipe.component';
  
 
 const appRoutes : Routes = [
@@ -26,6 +27,7 @@ const appRoutes : Routes = [
         { path : 'services' , component : ServicesComponent} ,
         { path : 'reactive' , component : ReactiveFormComponent} ,
         { path : 'directive' , component : DirectiveComponent},
+        { path : 'pipe' , component : PipeComponent},
         { path : 'forms' , component : FormsComponent},
         { path : 'observable' , component : ObservableComponent , children : [
             { path : 'observables' , component:HomeComponent } ,
