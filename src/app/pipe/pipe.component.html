@@ -10,7 +10,7 @@
             class="badge">
             {{ server.status }}
           </span>
-          <strong>{{ server.name | shorten }}</strong> | 
+          <strong>{{ server.name | shorten:1 }}</strong> | 
           {{ server.instanceType | uppercase }} | 
           {{ server.started | date:'fullDate' | uppercase }}
         </li>
@@ -18,3 +18,6 @@
     </div> 
   </div>
 </div>
+
+
+<!-- use : for more parameters in pipe -->
