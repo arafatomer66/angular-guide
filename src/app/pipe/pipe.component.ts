@@ -6,7 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pipe.component.css']
 })
 export class PipeComponent implements OnInit {
-
+   appStatus = new Promise((resolve , reject)=>{
+     setTimeout(()=>{
+       resolve('stable');
+     },2000)
+   });
   servers = [
     {
       instanceType: 'medium',
