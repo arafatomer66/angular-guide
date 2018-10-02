@@ -59,6 +59,7 @@
                     <div class="row"
                     *ngFor = "let ingredientCrtl  of recipeForm.get('ingredients').controls ; let i = index"
                     [formGroupName]="i"
+                    style="margin-top:10px;"
                     >
                       <div class="col-xs-8">
                         <input 
@@ -76,6 +77,13 @@
                         <button class="btn btn-danger" >X</button>
                       </div>
                     </div>
+                     <br>
+                    <div class="row">
+                        <div class="col-xs-12">
+                          <button type="button" class="btn btn-success" (click) ="onAddIngredient()">Add Ingredient</button>
+                        </div>
+                    </div>
+
                   </div>
                 </div>
   
