@@ -1,5 +1,9 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
+import { Http, Response } from '@angular/http';
+import { map } from 'rxjs/operators';
+
+
+
 
 @Injectable({
   providedIn: 'root'
@@ -17,7 +21,13 @@ export class ServerService {
   }
    
   getServers(){
-    return this.http.get('https://ng-recipe-book-866d5.firebaseio.com/data.json') ;
+    return this.http.get('https://ng-recipe-book-866d5.firebaseio.com/data.json').pipe(map(
+       (response : Response)=> {
+         const data = response.json();
+         return data ;
+       }
+     ) 
+    )
   }
 
 }
