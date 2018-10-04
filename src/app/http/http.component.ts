@@ -53,6 +53,7 @@ export class HttpComponent implements OnInit {
   }
 
   ngOnInit() {
+    
   }
 
 }

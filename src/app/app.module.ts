@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import { HttpModule, Http } from '@angular/http';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { RecipesComponent } from './recipes/recipes.component';
@@ -41,6 +41,11 @@ import { PipeComponent } from './pipe/pipe.component';
 import { ShortenPipe } from './pipe/shorten.pipe';
 import { FilterPipe } from './pipe/filter.pipe';
 import { HttpComponent } from './http/http.component';
+import { HttpClient } from 'selenium-webdriver/http';
+import { HttpClientModule } from '@angular/common/http';
+
+import { DataStorageService } from './shared/data-storage.service';
+
 
 
 
@@ -86,12 +91,12 @@ import { HttpComponent } from './http/http.component';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpModule
 
   ],
-  providers: [AccountsService , LoggingService ,RecipeService , ShoppingListService , UserService  ],
+  providers: [AccountsService , LoggingService ,RecipeService , ShoppingListService , UserService , DataStorageService  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
