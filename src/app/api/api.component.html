@@ -1,0 +1,39 @@
+<h4>Fetching data from API</h4>
+
+<div class="container">
+  <div class="row">
+    <div class="col-1"></div>
+
+    <div class="col-10">
+
+      <table *ngIf="apiBrowser" class="table">
+        <thead>
+          <tr>
+            <th class="text-center">ID</th>
+            <th class="text-center">Name</th>
+            <th class="text-center">Day</th>
+            <td class="text-center">Date</td> 
+            <th class="text-center">StartTime</th>
+            <th class="text-center">EndTime</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let api of apiBrowser.data">
+            <td class="text-center" style="width: 15px">{{api.ShiftId}}</td>
+             <!-- <td class="text-center" style="width: 15px">{{account.accountClass}}</td>
+            <td class="text-center" style="width: 15px">{{account.accountCode}}</td> -->
+            <td class="text-center">{{api.NameOfDay}}</td> 
+            <td class="text-center">{{api.EmployeeName}}</td> 
+            <td class="text-center">{{api.ShiftDate}}</td> 
+            <td class="text-center">{{api.StartTime}}</td> 
+            <td class="text-center">{{api.EndTime}}</td> 
+          </tr>
+        </tbody>
+      </table>
+
+
+    </div>
+
+    <div class="col-1"></div>
+  </div>
+</div>

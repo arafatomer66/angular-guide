@@ -45,6 +45,7 @@ import { HttpClient } from 'selenium-webdriver/http';
 import { HttpClientModule } from '@angular/common/http';
 
 import { DataStorageService } from './shared/data-storage.service';
+import { ApiComponent } from './api/api.component';
 
 
 
@@ -85,7 +86,8 @@ import { DataStorageService } from './shared/data-storage.service';
     PipeComponent,
     ShortenPipe,
     FilterPipe,
-    HttpComponent
+    HttpComponent,
+    ApiComponent
    
   ],
   imports: [

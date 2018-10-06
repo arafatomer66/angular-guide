@@ -14,6 +14,7 @@ import { FormsComponent } from './forms/forms.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { PipeComponent } from './pipe/pipe.component';
 import { HttpComponent } from './http/http.component';
+import { ApiComponent } from './api/api.component';
  
 
 const appRoutes : Routes = [
@@ -29,6 +30,7 @@ const appRoutes : Routes = [
         { path : 'reactive' , component : ReactiveFormComponent} ,
         { path : 'directive' , component : DirectiveComponent},
         { path : 'http' , component : HttpComponent},
+        { path : 'api' , component : ApiComponent},
         { path : 'pipe' , component : PipeComponent},
         { path : 'forms' , component : FormsComponent},
         { path : 'observable' , component : ObservableComponent , children : [
