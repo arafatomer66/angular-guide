@@ -16,6 +16,7 @@ import { PipeComponent } from './pipe/pipe.component';
 import { HttpComponent } from './http/http.component';
 import { ApiComponent } from './api/api.component';
 import { SignupComponent } from './auth/signup/signup.component';
+import { SigninComponent } from './auth/signin/signin.component';
  
 
 const appRoutes : Routes = [
@@ -27,6 +28,7 @@ const appRoutes : Routes = [
        { path : ':id/edit' ,component : RecipeEditComponent  }
     ]} ,
         { path : 'signup' , component : SignupComponent},
+        { path : 'signin' , component : SigninComponent},
         { path : 'shopping-list' , component : ShoppingListComponent},
         { path : 'services' , component : ServicesComponent} ,
         { path : 'reactive' , component : ReactiveFormComponent} ,
