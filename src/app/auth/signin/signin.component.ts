@@ -22,3 +22,5 @@ export class SigninComponent implements OnInit {
   
 
 }
+
+//sign up
