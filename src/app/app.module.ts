@@ -48,6 +48,7 @@ import { DataStorageService } from './shared/data-storage.service';
 import { ApiComponent } from './api/api.component';
 import { SignupComponent } from './auth/signup/signup.component';
 import { SigninComponent } from './auth/signin/signin.component';
+import { AuthService } from './auth/auth.service';
 
 
 
@@ -102,7 +103,7 @@ import { SigninComponent } from './auth/signin/signin.component';
     HttpModule
 
   ],
-  providers: [AccountsService , LoggingService ,RecipeService , ShoppingListService , UserService , DataStorageService  ],
+  providers: [AccountsService , LoggingService ,RecipeService , ShoppingListService , UserService , DataStorageService ,AuthService  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
