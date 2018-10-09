@@ -18,7 +18,7 @@ export interface ApiResult<T> {
 })
 export class ApiService {
 
-  private apiURL = "------";
+  private apiURL = "http://103.4.147.82:84/api/action/ripon.getShiftForProcess";
 
   constructor(private http : Http) { 
 

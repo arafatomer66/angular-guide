@@ -28,6 +28,8 @@ export class HttpComponent implements OnInit {
       name: name,
       capacity: 50,
       id: this.generateId()
+
+      
     });
   }
   private generateId() {
