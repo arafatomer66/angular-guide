@@ -15,6 +15,7 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { PipeComponent } from './pipe/pipe.component';
 import { HttpComponent } from './http/http.component';
 import { ApiComponent } from './api/api.component';
+import { SignupComponent } from './auth/signup/signup.component';
  
 
 const appRoutes : Routes = [
@@ -25,6 +26,7 @@ const appRoutes : Routes = [
        { path : ':id' , component : RecipeDetailComponent },
        { path : ':id/edit' ,component : RecipeEditComponent  }
     ]} ,
+        { path : 'signup' , component : SignupComponent},
         { path : 'shopping-list' , component : ShoppingListComponent},
         { path : 'services' , component : ServicesComponent} ,
         { path : 'reactive' , component : ReactiveFormComponent} ,
@@ -50,6 +52,5 @@ export class AppRoutingModule {
 // No spaces should be there in path :
 
 // :id dynamic 
-
 
 //Ordering the children path are most important 

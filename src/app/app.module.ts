@@ -46,6 +46,8 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { DataStorageService } from './shared/data-storage.service';
 import { ApiComponent } from './api/api.component';
+import { SignupComponent } from './auth/signup/signup.component';
+import { SigninComponent } from './auth/signin/signin.component';
 
 
 
@@ -87,7 +89,9 @@ import { ApiComponent } from './api/api.component';
     ShortenPipe,
     FilterPipe,
     HttpComponent,
-    ApiComponent
+    ApiComponent,
+    SignupComponent,
+    SigninComponent
    
   ],
   imports: [
