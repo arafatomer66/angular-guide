@@ -49,6 +49,7 @@ import { ApiComponent } from './api/api.component';
 import { SignupComponent } from './auth/signup/signup.component';
 import { SigninComponent } from './auth/signin/signin.component';
 import { AuthService } from './auth/auth.service';
+import { ApiCrudComponent } from './api-crud/api-crud.component';
 
 
 
@@ -92,7 +93,8 @@ import { AuthService } from './auth/auth.service';
     HttpComponent,
     ApiComponent,
     SignupComponent,
-    SigninComponent
+    SigninComponent,
+    ApiCrudComponent
    
   ],
   imports: [
