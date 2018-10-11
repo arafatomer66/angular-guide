@@ -13,6 +13,22 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+Route::post('/quote' ,
+[
+    'uses' => 'QuotesController@postQuote'
+]);
+
+Route::get('/quotes' ,
+[
+    'uses' => 'QuotesController@getQuote'
+]);
+
+Route::put('/quote/{id}' ,
+[
+    'uses' => 'QuotesController@putQuote'
+]);
+
+Route::delete('/quote/{id}' ,
+[
+    'uses' => 'QutoesController@deleteQuote'
+]);
