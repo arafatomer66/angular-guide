@@ -18,6 +18,8 @@ import { ApiComponent } from './api/api.component';
 import { SignupComponent } from './auth/signup/signup.component';
 import { SigninComponent } from './auth/signin/signin.component';
 import { ApiCrudComponent } from './api-crud/api-crud.component';
+import { QuotesComponent } from './api-crud/quotes/quotes.component';
+import { NewQuoteComponent } from './api-crud/new-quote/new-quote.component';
  
 
 const appRoutes : Routes = [
@@ -29,7 +31,11 @@ const appRoutes : Routes = [
        { path : ':id/edit' ,component : RecipeEditComponent  }
     ]} ,
         { path : 'signup' , component : SignupComponent},
-        { path : 'apicrud' , component : ApiCrudComponent},
+        { path : 'apicrud' , component : ApiCrudComponent , children : [
+            { path : '' , component: QuotesComponent },
+            { path : 'new-quote' , component: NewQuoteComponent }
+            
+        ] },
         { path : 'signin' , component : SigninComponent},
         { path : 'shopping-list' , component : ShoppingListComponent},
         { path : 'services' , component : ServicesComponent} ,
@@ -43,6 +49,7 @@ const appRoutes : Routes = [
             { path : 'observables' , component:HomeComponent } ,
             { path : 'user/:id' , component : UserComponent  }
         ]  }
+        
 ]
 @NgModule({
     imports : [RouterModule.forRoot(appRoutes) ],

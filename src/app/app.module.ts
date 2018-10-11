@@ -50,6 +50,10 @@ import { SignupComponent } from './auth/signup/signup.component';
 import { SigninComponent } from './auth/signin/signin.component';
 import { AuthService } from './auth/auth.service';
 import { ApiCrudComponent } from './api-crud/api-crud.component';
+import { QuoteComponent } from './api-crud/quote/quote.component';
+import { QuotesComponent } from './api-crud/quotes/quotes.component';
+import { NewQuoteComponent } from './api-crud/new-quote/new-quote.component';
+import { QuoteService } from './api-crud/quote.service';
 
 
 
@@ -94,7 +98,10 @@ import { ApiCrudComponent } from './api-crud/api-crud.component';
     ApiComponent,
     SignupComponent,
     SigninComponent,
-    ApiCrudComponent
+    ApiCrudComponent,
+    QuoteComponent,
+    QuotesComponent,
+    NewQuoteComponent
    
   ],
   imports: [
@@ -105,7 +112,7 @@ import { ApiCrudComponent } from './api-crud/api-crud.component';
     HttpModule
 
   ],
-  providers: [AccountsService , LoggingService ,RecipeService , ShoppingListService , UserService , DataStorageService ,AuthService  ],
+  providers: [AccountsService , LoggingService ,RecipeService , ShoppingListService , UserService , DataStorageService ,AuthService , QuoteService  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
