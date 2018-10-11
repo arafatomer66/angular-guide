@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http, Response } from '@angular/http';
+import { Http, Response , Headers } from '@angular/http';
 import { map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 
@@ -22,4 +22,15 @@ export class QuoteService {
     
     ;
   }
+ updateQuote(id : number , newContent : string){
+   const body = JSON.stringify({content : newContent});
+   const headers =  new Headers({ 'Content-Type' : 'application/json'});
+   return this.http.put('http://localhost:8000/api/quote/'+id , body , { headers : headers }).pipe(
+     map(
+       (response : Response) => response.json()
+     )
+   );
+ }
+
+
 }

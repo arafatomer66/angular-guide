@@ -20,7 +20,8 @@ export class QuotesComponent implements OnInit {
   onGetQuotes(){
     this.quoteService.getQuotes()
     .subscribe(
-      (quotes : Quote[]) => this.quotes =quotes ,
+      (quotes : Quote[]) => this.quotes =quotes 
+      ,
       (error : Response ) =>  console.log(error)
     )
   }
