@@ -30,5 +30,5 @@ Route::put('/quote/{id}' ,
 
 Route::delete('/quote/{id}' ,
 [
-    'uses' => 'QutoesController@deleteQuote'
+    'uses' => 'QuotesController@deleteQuote'
 ]);

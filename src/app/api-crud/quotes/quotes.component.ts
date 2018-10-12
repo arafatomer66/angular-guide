@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { Quote } from '../quote';
 import { QuoteService } from '../quote.service';
 import { Response } from '@angular/http';
@@ -11,6 +11,7 @@ import { Response } from '@angular/http';
 export class QuotesComponent implements OnInit {
 
   quotes : Quote[] ;
+  @Output() quoteDeleted = new EventEmitter<Quote>();
 
   constructor(private quoteService : QuoteService) { }
 
@@ -24,6 +25,16 @@ export class QuotesComponent implements OnInit {
       ,
       (error : Response ) =>  console.log(error)
     )
+  }
+
+
+  onDeleted(quote : Quote){
+    const position = this.quotes.findIndex(
+       (quoteEl : Quote) => {
+          return quoteEl.id == quote.id
+       }
+    )
+    this.quotes.splice(position,1);
   }
 
 }

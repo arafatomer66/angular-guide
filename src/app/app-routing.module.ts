@@ -32,7 +32,7 @@ const appRoutes : Routes = [
     ]} ,
         { path : 'signup' , component : SignupComponent},
         { path : 'apicrud' , component : ApiCrudComponent , children : [
-            { path : '' , component: QuotesComponent },
+            { path : 'quotes' , component: QuotesComponent },
             { path : 'new-quote' , component: NewQuoteComponent }
             
         ] },
