@@ -57,6 +57,7 @@ import { QuoteService } from './api-crud/quote.service';
 import { MaterialModule } from './material/material.module';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { TestComponent } from './test/test.component';
+import { ImageComponent } from './test/image/image.component';
 
 
 
@@ -105,7 +106,8 @@ import { TestComponent } from './test/test.component';
     QuoteComponent,
     QuotesComponent,
     NewQuoteComponent,
-    TestComponent
+    TestComponent,
+    ImageComponent
    
   ],
   imports: [

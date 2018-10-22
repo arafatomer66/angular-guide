@@ -21,6 +21,7 @@ import { ApiCrudComponent } from './api-crud/api-crud.component';
 import { QuotesComponent } from './api-crud/quotes/quotes.component';
 import { NewQuoteComponent } from './api-crud/new-quote/new-quote.component';
 import { TestComponent } from './test/test.component';
+import { ImageService } from './test/image/image.service';
  
 
 const appRoutes : Routes = [
@@ -41,7 +42,7 @@ const appRoutes : Routes = [
         { path : 'shopping-list' , component : ShoppingListComponent},
         { path : 'services' , component : ServicesComponent} ,
         { path : 'reactive' , component : ReactiveFormComponent} ,
-        { path : 'test' , component : TestComponent} ,
+        { path : 'test' , component : TestComponent } ,
         { path : 'directive' , component : DirectiveComponent},
         { path : 'http' , component : HttpComponent},
         { path : 'api' , component : ApiComponent},
