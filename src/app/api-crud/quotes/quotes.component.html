@@ -2,3 +2,5 @@
 <button class="btn btn-primary " (click) ="onGetQuotes()" >Get Quotes</button>
 <br>
 <app-quote *ngFor = "let quote of quotes" [quote]="quote" (quoteDeleted)="onDeleted($event)" ></app-quote>
+<br>
+

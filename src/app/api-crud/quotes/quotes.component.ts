@@ -10,31 +10,31 @@ import { Response } from '@angular/http';
 })
 export class QuotesComponent implements OnInit {
 
-  quotes : Quote[] ;
+  quotes: Quote[] ;
   @Output() quoteDeleted = new EventEmitter<Quote>();
 
-  constructor(private quoteService : QuoteService) { }
+  constructor(private quoteService: QuoteService) { }
 
   ngOnInit() {
   }
 
-  onGetQuotes(){
+  onGetQuotes() {
     this.quoteService.getQuotes()
     .subscribe(
-      (quotes : Quote[]) => this.quotes =quotes 
+      (quotes: Quote[]) => this.quotes = quotes
       ,
-      (error : Response ) =>  console.log(error)
-    )
+      (error: Response ) =>  console.log(error)
+    );
   }
 
 
-  onDeleted(quote : Quote){
+  onDeleted(quote: Quote) {
     const position = this.quotes.findIndex(
-       (quoteEl : Quote) => {
-          return quoteEl.id == quote.id
+       (quoteEl: Quote) => {
+          return quoteEl.id === quote.id;
        }
-    )
-    this.quotes.splice(position,1);
+    );
+    this.quotes.splice(position, 1);
   }
 
 }
