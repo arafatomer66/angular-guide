@@ -54,6 +54,10 @@ import { QuoteComponent } from './api-crud/quote/quote.component';
 import { QuotesComponent } from './api-crud/quotes/quotes.component';
 import { NewQuoteComponent } from './api-crud/new-quote/new-quote.component';
 import { QuoteService } from './api-crud/quote.service';
+import { MaterialModule } from './material/material.module';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { TestComponent } from './test/test.component';
+import { ImageComponent } from './test/image/image.component';
 
 
 
@@ -101,7 +105,9 @@ import { QuoteService } from './api-crud/quote.service';
     ApiCrudComponent,
     QuoteComponent,
     QuotesComponent,
-    NewQuoteComponent
+    NewQuoteComponent,
+    TestComponent,
+    ImageComponent
    
   ],
   imports: [
@@ -109,7 +115,9 @@ import { QuoteService } from './api-crud/quote.service';
     FormsModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpModule
+    HttpModule,
+    MaterialModule,
+    BrowserAnimationsModule
 
   ],
   providers: [AccountsService , LoggingService ,RecipeService , ShoppingListService , UserService , DataStorageService ,AuthService , QuoteService  ],
