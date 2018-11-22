@@ -1,5 +1,5 @@
 import {   NgModule   } from '@angular/core' ;
-import { RouterModule , Routes } from '@angular/router';
+import { RouterModule , Routes, PreloadAllModules } from '@angular/router';
 import { RecipesComponent } from './recipes/recipes.component';
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { ServicesComponent } from './services/services.component';
@@ -48,13 +48,13 @@ const appRoutes : Routes = [
         { path : 'pipe' , component : PipeComponent},
         { path : 'forms' , component : FormsComponent},
         { path : 'observable' , component : ObservableComponent , children : [
-            { path : 'observables' , component:HomeComponent } ,
+            { path : 'observables' , component: HomeComponent } ,
             { path : 'user/:id' , component : UserComponent  }
         ]  }
 
 ]
 @NgModule({
-    imports : [RouterModule.forRoot(appRoutes) ],
+    imports : [RouterModule.forRoot(appRoutes , { preloadingStrategy : PreloadAllModules }) ],
     exports :  [RouterModule]
 })
 
