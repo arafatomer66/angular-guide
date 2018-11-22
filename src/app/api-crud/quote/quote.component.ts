@@ -10,41 +10,43 @@ import { QuoteService } from '../quote.service';
 })
 export class QuoteComponent implements OnInit {
 
-  @Input() quote : Quote;
-  editing = false ;
-  editValue = '' ;
+  @Input() quote: Quote;
+  editing = false;
+  editValue = '';
   @Output() quoteDeleted = new EventEmitter<Quote>();
 
 
 
-  constructor(private quoteService : QuoteService) { }
+  constructor(private quoteService: QuoteService) { }
 
   ngOnInit() {
   }
 
-  onEdit(){
-    this.editing = true ;
-    this.editValue = this.quote.content ;
+  onEdit() {
+    this.editing = true;
+    this.editValue = this.quote.content;
   }
-  onUpdate(){
-    this.quoteService.updateQuote(this.quote.id , this.editValue)
-    .subscribe(
-      (quote : Quote) => { this.quote.content = this.editValue ,
-        this.editValue = '' ;}
-    );
-    
-    this.editing = false ;
-    
+  onUpdate() {
+    this.quoteService.updateQuote(this.quote.id, this.editValue)
+      .subscribe(
+        (quote: Quote) => {
+          this.quote.content = this.editValue,
+          this.editValue = '';
+        }
+      );
+
+    this.editing = false;
+
   }
-  onDelete(){
+  onDelete() {
     this.quoteService.deleteQuote(this.quote.id).subscribe(
       () => this.quoteDeleted.emit(this.quote)
-  
+
     );
   }
-  onCancel(){
-    this.editValue = '' ;
-    this.editing = false ;
+  onCancel() {
+    this.editValue = '';
+    this.editing = false;
   }
 
 }

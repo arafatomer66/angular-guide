@@ -21,7 +21,7 @@ import { ApiCrudComponent } from './api-crud/api-crud.component';
 import { QuotesComponent } from './api-crud/quotes/quotes.component';
 import { NewQuoteComponent } from './api-crud/new-quote/new-quote.component';
 import { TestComponent } from './test/test.component';
- 
+
 
 const appRoutes : Routes = [
     { path : '' , redirectTo : '/recipes' , pathMatch : 'full' } ,
@@ -35,7 +35,7 @@ const appRoutes : Routes = [
         { path : 'apicrud' , component : ApiCrudComponent , children : [
             { path : 'quotes' , component: QuotesComponent },
             { path : 'new-quote' , component: NewQuoteComponent }
-            
+
         ] },
         { path : 'signin' , component : SigninComponent},
         { path : 'shopping-list' , component : ShoppingListComponent},
@@ -51,12 +51,12 @@ const appRoutes : Routes = [
             { path : 'observables' , component:HomeComponent } ,
             { path : 'user/:id' , component : UserComponent  }
         ]  }
-        
+
 ]
 @NgModule({
     imports : [RouterModule.forRoot(appRoutes) ],
     exports :  [RouterModule]
-}) 
+})
 
 export class AppRoutingModule {
 
@@ -64,6 +64,6 @@ export class AppRoutingModule {
 
 // No spaces should be there in path :
 
-// :id dynamic 
+// :id dynamic
 
-//Ordering the children path are most important 
+//Ordering the children path are most important

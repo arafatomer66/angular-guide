@@ -9,17 +9,17 @@ import { QuoteService } from '../quote.service';
 })
 export class NewQuoteComponent implements OnInit {
 
-  constructor(private quoteService : QuoteService) { }
+  constructor(private quoteService: QuoteService) { }
 
   ngOnInit() {
   }
 
-  onSubmit(form : NgForm){
-     this.quoteService.addQuote(form.value.content)
-     .subscribe(
-       () => alert('Quote createed !')
-     );
-     form.reset();
+  onSubmit(form: NgForm) {
+    this.quoteService.addQuote(form.value.content)
+      .subscribe(
+        () => alert('Quote createed !')
+      );
+    form.reset();
   }
 
 }

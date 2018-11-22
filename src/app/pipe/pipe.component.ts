@@ -6,11 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pipe.component.css']
 })
 export class PipeComponent implements OnInit {
-   appStatus = new Promise((resolve , reject)=>{
-     setTimeout(()=>{
-       resolve('stable');
-     },2000)
-   });
+  appStatus = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve('stable');
+    }, 2000);
+  });
   servers = [
     {
       instanceType: 'medium',
@@ -40,7 +40,7 @@ export class PipeComponent implements OnInit {
 
 
   filteredStatus = '';
-  getStatusClasses(server: {instanceType: string, name: string, status: string, started: Date}) {
+  getStatusClasses(server: { instanceType: string, name: string, status: string, started: Date }) {
     return {
       'list-group-item-success': server.status === 'stable',
       'list-group-item-warning': server.status === 'offline',
@@ -48,12 +48,12 @@ export class PipeComponent implements OnInit {
     };
   }
 
-  onAddServer(){
+  onAddServer() {
     this.servers.push({
-      instanceType : 'small' ,
-      name : 'new server',
-      status : 'stable' ,
-      started: new Date(15,2,2017)
+      instanceType: 'small',
+      name: 'new server',
+      status: 'stable',
+      started: new Date(15, 2, 2017)
     });
   }
 
